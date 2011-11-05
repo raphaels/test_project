@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+ <div class="intro">
+ <table border="0">
+  <tr>
+    <th>
+		<img src="@{'/public/images/intro.jpg'}" style="width: 275px; height: 183px;" alt="intro" />
+		<table border="0"> 
+		  <form action="@{Application.login()}" method="GET">
+		  <tr>
+		    <th> User </th>
+		    <th> <input type="text" name="user" /> </th>
+		  </tr>
+		  <tr>
+		    <th> Passwort </th>
+		    <th> <input type="password" name="password" /> </th>
+		  </tr>
+		  <tr>
+		    <th></th> <th><input type="submit" value="Login" /> </th>
+		  </tr>
+		  </form> 
+  		<form action="@{Application.register()}" method="GET">
+		<th></th> <th><input type="submit" value="Registrieren" /></th>
+		</form>
+		</table> 
+		
+	</th>
+    <th>
+	    <h1>Willkomen in unserem Forum!</h1> <p></p>
+	    <h5> ${message} </h5>
+	    <h3> Derzeit sind keine Einträge vorhanden! </h3>
+	</th>
+    <th>
+		<img src="@{'/public/images/intro.jpg'}" style="width: 275px; height: 183px;" alt="intro" />
+	</th>
+   </tr>
+</div>

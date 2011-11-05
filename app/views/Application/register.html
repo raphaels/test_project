@@ -1,0 +1,32 @@
+#{extends 'main.html' /}
+#{set title:'Registrieren' /}
+ 
+<h1>Willkommen zur Registrierung!</h1>
+<h3> Bitte geben Sie Ihre Daten an: </h3>
+
+<table border="0"> 
+		  <form action="@{Application.newUser()}" method="GET">
+		  <tr>
+		    <th> Benutzername </th>
+		    <th> <input type="text" name="user" /> </th>
+		  </tr>
+		  <tr>
+		    <th> Passwort </th>
+		    <th> <input type="password" name="password" /> </th>
+		  </tr>
+		  <tr>
+  		  <tr>
+		    <th> Geburtstag </th>
+		    <th> <input type="date" name="birthday" /> </th>
+		  </tr>
+		  <tr>
+		    <th> Email </th>
+		    <th> <input type="text" name="email" /> </th>
+		  </tr>
+		  
+		  <th></th> <th><input type="submit" value="Registrieren" /> </th>
+		  </tr>
+		  </form> 
+		</table> 
+
+<a href="@{Application.index()}">Startseite</a>
